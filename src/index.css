@@ -19,4 +19,10 @@
 
 body {
   min-height: 100vh;
+  padding: 0;
+}
+
+#root {
+  padding: 0;
+
 }

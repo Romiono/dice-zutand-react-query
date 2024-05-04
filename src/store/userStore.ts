@@ -26,4 +26,7 @@ export const useUserStore = create<IUsers & IActions>()((set) => ({
         token: user.token,
         role: user.role,
     }))),
+    mockLogin: () => (set((state) => ({
+        isAuth: !state.isAuth,
+    }))),
 }));

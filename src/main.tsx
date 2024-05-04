@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Blog from "./Pages/Blog.tsx";
+import PostPage from "./Pages/PostPage.tsx";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
+        children: [
+            {
+                path: '/',
+                element: <Blog/>,
+            },
+            {
+                path: 'posts/:id',
+                element: <PostPage/>,
+            },
+        ],
     },
 ]);
 
